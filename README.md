@@ -156,18 +156,23 @@ Acima estão listados os principais insights, os que estão diretamente relacion
 ## Recomendações de negócio
 
 1. Utilizar DTI como indicador central de capacidade de pagamento
+
 Como o DTI foi a variável com maior poder de discriminação entre aprovados e rejeitados, recomenda-se utilizá-lo como um dos principais indicadores na avaliação do comprometimento financeiro do solicitante.
 
 2. Combinar Credit Score e DTI na avaliação de risco
+   
 A análise mostra que histórico de crédito e comprometimento da renda capturam aspectos diferentes do risco. A utilização conjunta dessas variáveis pode proporcionar uma avaliação mais completa do perfil do solicitante.
 
 3. Avaliar o valor solicitado em conjunto com a capacidade financeira
+
 Valores de empréstimo mais elevados apresentaram maior associação com rejeições. Portanto, o valor solicitado deve ser analisado em relação à renda e ao DTI do cliente, evitando avaliar o montante isoladamente.
 
 4. Aplicar análises diferenciadas conforme a finalidade do empréstimo
+
 Como a finalidade apresentou diferenças relevantes nas taxas de rejeição, recomenda-se acompanhar o risco por tipo de empréstimo e investigar as razões dessas diferenças antes de estabelecer critérios específicos para cada finalidade.
 
 5. Utilizar os resultados como apoio à decisão, não como regras automáticas
+   
 Os resultados identificam associações, e não relações causais. Antes de transformar esses padrões em regras de concessão de crédito, seria necessário validar os achados com dados adicionais e testar um modelo preditivo em dados fora da amostra.
 
 ## Dashboard
