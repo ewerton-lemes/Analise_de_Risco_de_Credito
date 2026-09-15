@@ -132,9 +132,8 @@ O heatmap abaixo mostra a taxa de rejeição para cada combinação entre faixa 
 
 ![Heatmap](https://raw.githubusercontent.com/ewerton-lemes/Analise_de_Risco_de_Credito/main/heatmap.png)
 
-github.com/ewerton-lemes/Analise_de_Risco_de_Credito/blob/main/heatmap.png
 
-A análise conjunta de Credit Score e DTI evidencia que a combinação de baixa pontuação de crédito e elevado comprometimento da renda está associada às maiores taxas de rejeição, enquanto scores elevados combinados a baixo DTI apresentam taxas muito inferiores. Para acriação desse heatmap foram descartados os clientes que possuíam a informação de Credit Score ausente.
+A análise conjunta de Credit Score e DTI evidencia que a combinação de baixa pontuação de crédito e elevado comprometimento da renda está associada às maiores taxas de rejeição, enquanto scores elevados combinados a baixo DTI apresentam taxas muito inferiores. Para a criação desse heatmap foram descartados os clientes que possuíam a informação de Credit Score ausente.
 
 ## Outros achados relevantes
 
