@@ -151,7 +151,7 @@ Information Value: 0,362.
 
 ## Observação sobre os insights
 
-Acima estão listados os principais insights, os que estão diretamente relacionados à pergunta de negócio. As outras análise mencionadas nos Objetivos estão no arquivo excel, juntamente com seu insights, que está na pasta https://github.com/ewerton-lemes/Analise_de_Risco_de_Credito/tree/main/analise. A maioria deles são descritivos.
+Acima estão listados os principais insights, os que estão diretamente relacionados à pergunta de negócio. As outras análise mencionadas nos Objetivos estão no arquivo excel, juntamente com seus insights, que está na pasta https://github.com/ewerton-lemes/Analise_de_Risco_de_Credito/tree/main/analise. A maioria deles são descritivos.
 
 ## Recomendações de negócio
 
