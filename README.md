@@ -95,7 +95,13 @@ Na tabela a seguir vemos que, para as faixas de DTI apresentadas, quanto maior o
 
 Além disso, o Information Value (IV) = 3,65, indicando forte poder de discriminação na amostra. No cálculo do IV e da tabela acima foram considerados somente os clientes com créditos aprovados e rejeitados, os que possuíam crédito pendente não foram considerados. Como o valor de IV foi muito alto, alguns cálculos foram feitos para avaliar a ocorrência de *data leakage*, já que na base de dados não há documentação para explicar como o DTI foi obtido.
 
-Foram avaliados os clientes que possuíam 0 empréstimos, que formam um total de 2161 clintes. Destes clientes, aplicando a fórmula Monthly_Installment/(Annual_Income/12)*100 para cálculo do DTI, em 1737 registros, os resultados dessa fórmula são iguais aos fornecidos pela base de dados. Dos outros 424 que obtiveram resultados diferentes, 398 obtiveram um DTI maior que 95 e que, na base de dados, o DTI foi limitado a 95. Os 26 restantes tiveram ambos os resultados menores ou iguais a 95 com resultados diferentes entre a fórmula e a base de dados, o que parece ser uma inconsistência nos dados. Isso sugere fortemente que no DTI está incluso o próprio empréstimo que o cliente está solicitando. 
+Foram avaliados os clientes que possuíam 0 empréstimos, que formam um total de 2161 clintes. Destes clientes, aplicando a fórmula  
+
+$$\mbox{DTI} = \displaystyle\frac{\mbox{Monthly Installment}}{\mbox{Annual Income}/12} \times 100$$
+
+para cálculo do DTI, em 1737 registros, os resultados dessa fórmula são iguais aos fornecidos pela base de dados. Dos outros 424 que obtiveram resultados diferentes, 398 obtiveram um DTI maior que 95 e que, na base de dados, o DTI foi limitado a 95. Os 26 restantes tiveram ambos os resultados menores ou iguais a 95 com resultados diferentes entre a fórmula e a base de dados, o que parece ser uma inconsistência nos dados. Isso sugere fortemente que no DTI está incluso o próprio empréstimo que o cliente está solicitando. 
+
+Além do que foi mencionado acima, quando o número de empréstimos aumenta, nenhum valor de DTI da base de dados coincide com os cálculados pela fórmula, sugerindo então que o DTI da base de dados assume dívidas obtidas anteriormente. Esse fato é reforçado quando calculamos as médias das diferenças entre o DTI da base de dados e o obtido pela fórmula, conforme o número de empréstimo aumenta, a média das disferenças também aumenta.
 
 Devido a esse fato, a melhor conclusão é: maiores níveis de DTI estão associados a maior proporção de rejeições no conjunto analisado. Não podemos dizer simplesmente que clientes com maior endividamento anterior são mais rejeitados.
 
@@ -112,7 +118,9 @@ Na tabela segiunte vemos que, para as faixas de Credit Score apresentadas, quant
 | 750–799 | 0,0% |
 | ≥ 800 | 0,0% |
 
-O Information Value (IV) = 2,39 indica uma forte associação à rejeição. Nesse cálculo de IV e da tabela acima também foram considerados somente os clientes com créditos aprovados e rejeitados, os que possuíam crédito pendente não foram considerados. Além disso esse IV alto deve ser avaliado, pois pode ter ocorrido *data leakage*.
+O Information Value (IV) = 2,39 indica uma forte associação à rejeição. Nesse cálculo de IV e da tabela acima também foram considerados somente os clientes com créditos aprovados e rejeitados, os que possuíam crédito pendente não foram considerados. Além disso esse IV alto deve ser avaliado, pois não há documentação na base de dados explicando como foi calculado esse Credit Score. Não é possível saber se é um calculo anterior baseado nos dados dos clientes ou se inclui o próprio impréstimo solicitado. Também não é possível saber se a fórmula usada para cálculo do Credit Score é particular a instituição que fornece o empréstimo.
+
+Mas, independentemente de como o Credit Score foi calculado, maiores pontuações estão associadas e menores taxas de rejeição.
 
 **3. Credit Score e DTI, analisados conjuntamente, permitem identificar perfis distintos**
 
@@ -143,7 +151,7 @@ A análise conjunta de Credit Score e DTI evidencia que a combinação de baixa 
 
 **1. Valor solicitado**
 
-A taxa de rejeição apresenta tendência de crescimento conforme aumenta o valor solicitado, passando de 4,33% na menor faixa para valores superiores a 20% nas faixas mais elevadas.
+A taxa de rejeição apresenta tendência de crescimento conforme aumenta o valor solicitado, passando de 4,33% na menor faixa (menores que $ 20.940,00) para valores superiores a 20% nas faixas mais elevadas (maiores que $ 200.940,00).
 
 Information Value: 0,388.
 
