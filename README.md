@@ -103,6 +103,8 @@ para cálculo do DTI, em 1737 registros, os resultados dessa fórmula são iguai
 
 Além do que foi mencionado acima, quando o número de empréstimos aumenta, nenhum valor de DTI da base de dados coincide com os cálculados pela fórmula, sugerindo então que o DTI da base de dados assume dívidas obtidas anteriormente. Esse fato é reforçado quando calculamos as médias das diferenças entre o DTI da base de dados e o obtido pela fórmula, conforme o número de empréstimo aumenta, a média das disferenças também aumenta.
 
+Nesses cálculo foram considerados somente os clientes em que a variável Annual_Income Não estava ausente.
+
 Devido a esse fato, a melhor conclusão é: maiores níveis de DTI estão associados a maior proporção de rejeições no conjunto analisado. Não podemos dizer simplesmente que clientes com maior endividamento anterior são mais rejeitados.
 
 **2. O Crédit Score apresenta uma forte associado à rejeição.**
